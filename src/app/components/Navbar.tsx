@@ -179,7 +179,7 @@ const Navbar: React.FC = () => {
   const pathname = usePathname();
 
   return (
-    <div className="flex items-center justify-center px-10 gap-20 py-4 font-medium bg-white">
+    <div className="sticky top-0 z-50 flex items-center justify-center px-10 gap-20 py-4 font-medium bg-white shadow-sm">
       <div>
         <img className="w-12" src="/logo_disarpus.png" alt="logo" />
       </div>
