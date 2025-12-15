@@ -146,8 +146,8 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
                     >
                       <div className="rounded-xl bg-white shadow-lg ring-1 ring-black/5 py-3">
                         <ul>
-                          {item.children!.map((child) => (
-                            <li key={child.href}>
+                          {item.children!.map((child, index) => (
+                            <li key={`${child.label}-${index}`}>
                               <Link
                                 href={child.href!}
                                 className={[
