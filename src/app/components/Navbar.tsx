@@ -17,8 +17,8 @@ type DropdownMenuProps = {
 };
 
 const navLinkBase = "transition-colors duration-200";
-const navLinkActive = "text-[#4154F1]";
-const navLinkIdle = "text-[#012970] hover:text-[#4154F1]";
+const navLinkActive = "text-[#1895A2]";
+const navLinkIdle = "text-[#012970] hover:text-[#1895A2]";
 
 const isActive = (pathname: string, href?: string) => {
   if (!href) return false;
@@ -137,7 +137,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
                   {hasChildren && (
                     <div
                       className={[
-                        "absolute left-full top-0 ml-2 w-64",
+                        "absolute left-full top-0 pl-2 w-64",
                         "transition-all duration-200 ease-out",
                         isOpenChild
                           ? "opacity-100 translate-x-0 pointer-events-auto"
