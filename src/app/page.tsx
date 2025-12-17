@@ -5,16 +5,15 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="min-h-screen bg-white">
-      {/* ================= BANNER ================= */}
-
-      <section className="relative h-fit w-full sm:h-[320px] md:h-[420px] lg:min-h-[520px]">
-        <div className="">
+      {/* ================= BANNER FULL BLEED =================   }
+      <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
+        <div className="relative min-h-[520px] w-screen">
           <Image
             src="/banner_disarpus.jpg"
             alt="Banner Dinas Arsip dan Perpustakaan Kabupaten Bekasi"
             fill
             priority
-            className="object-cover"
+            className="object-contain bg-white"
           />
         </div>
       </section>

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Poppins } from "next/font/google";
-
+import Footer from "@/app/components/Footer";
 import Navbar from "@/app/components/Navbar";
 
 export const metadata: Metadata = {
@@ -25,6 +25,7 @@ export default function RootLayout({
       <body className="bg-white">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
