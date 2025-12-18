@@ -1,88 +1,71 @@
-import Image from "next/image";
+import React from 'react'
+import Image from 'next/image'
 
-export default function Footer() {
+ const Footer = () => {
   return (
-    <footer className="bg-[#2e2e2e] text-white">
-      {/* ================= TOP ================= */}
-      <div className="px-18 pt-14 pb-10">
-        <div className="mx-auto grid max-w-14xl grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="flex items-start gap-3">
-            <Image
-              src="/logo_disarpus.png"
-              alt="Logo Disarpus"
-              width={80}
-              height={80}
-            />
-
-            <div>
-              <span className="mb-2 block text-base font-semibold text-white">
-                Dinas Arsip dan Perpustakaan Kab. Bekasi
-              </span>
-
-              <ul className="space-y-1 text-sm">
-                <li>Pemkab Bekasi</li>
-                <li>ANRI</li>
-                <li>Perpusnas</li>
-                <li>Komunitas</li>
-              </ul>
-            </div>
+    <footer className='flex flex-col py-8 px-35 bg-[#215D64] text-white'>
+      <div className="flex flex-row justify-between border-b-2 border-white pb-10">
+        <div className='flex flex-row gap-9'>
+          <img src="logo_disarpus_white.png" alt="" className='aspect-square w-17 h-17'/>
+          <div className='flex flex-col gap-2.5 text-[13px] font-base'>
+            <h1 className='text-base font-semibold'>
+              Dinas Perpustakaan dan Arsip Kab. Bekasi
+            </h1>
+            <a href="#">Pemkab Bekasi</a>
+            <a href="#">ANRI</a>
+            <a href="#">Perpusnas</a>
+            <a href="#">Komunitas</a>
           </div>
-          <div />
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
-            <div className="text-left  md:text-right">
-              <h4 className="mb-3 text-base font-semibold text-white">
-                Contact Us
-              </h4>
-              <p className="text-sm leading-relaxed">
-                disarpus@bekasikab.go.id
-              </p>
-              <p className="mt-2 text-sm">+62 857-3907-6216</p>
-            </div>
-            <div className="w-full h-40 overflow-hidden rounded-lg border border-white/20">
-              <iframe
-                title="Lokasi Dinas Arsip dan Perpustakaan Daerah Kabupaten Bekasi"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d824.0000000000001!2d107.1718405!3d-6.3643499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699be0d223f435%3A0xaf71ae539bf1557e!2sDINAS%20ARSIP%20DAN%20PERPUSTAKAAN%20DAERAH!5e0!3m2!1sid!2sid!4v1700000000000"
-                className="w-full h-full border-0"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
+        <div className="flex flex-row gap-25">
+          <div className='flex flex-col gap-2.5 text-[13px] font-base'>
+            <h1 className='text-base font-semibold'>
+              Navigasi
+            </h1>
+            <a href="#">Home</a>
+            <a href="#">Tentang Kami</a>
+            <a href="#">Pemberdayaan</a>
+            <a href="#">Komunitas</a>
+          </div>
+          <div className='flex flex-col gap-2.5 text-[13px] font-base'>
+            <h1 className='text-base font-semibold'>
+              Layanan
+            </h1>
+            <a href="#">Frequently Asked Questions (FAQ)</a>
+            <a href="#">Survey Kepuasan Masyarakat</a>
+            <a href="#">Pengaduan Online</a>
           </div>
         </div>
       </div>
+      <div className="flex flex-row justify-between text-[13px] pt-3">
+        <div className="flex flex-col gap-1">
+          <p className='font-medium'>disarpus@bekasikab.go.id</p>
+          <p>DISARPUS Kab. Bekasi © 2025</p>
+        </div>
 
-      {/* ================= DIVIDER ================= */}
-      <div className="mx-auto max-w-6xl border-t border-gray-400/40" />
+        <div className="flex flex-col text-center">
+          <p>Komplek Perkantoran PemKab Bekasi Jln. Deltamas Boulevard Sukamahi - Cikarang Pusat</p>
+          <p>Kabupaten Bekasi - Jawa Barat 17530</p>
+          <p>Indonesia</p>
+        </div>
 
-      {/* ================= BOTTOM ================= */}
-      <div className="px-6 py-6">
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 md:flex-row md:justify-between">
-          {/* LEFT */}
-          <p className="text-sm text-gray-400">
-            DISARPUS Kabupaten Bekasi © 2025.
-          </p>
-
-          {/* CENTER */}
-          <p className="max-w-xl text-center text-sm text-gray-400">
-            Komplek Perkantoran PemKab Bekasi Jln. Deltamas Boulevard Sukamahi –
-            Cikarang Pusat Kabupaten Bekasi – Jawa Barat 17530 Indonesia
-          </p>
-
-          {/* RIGHT */}
-          <div className="flex items-center gap-4">
-            <Image src="/facebook.png" alt="Facebook" width={18} height={18} />
-            <Image
-              src="/instagram.png"
-              alt="Instagram"
-              width={18}
-              height={18}
-            />
-            <Image src="/youtube.png" alt="Youtube" width={18} height={18} />
-            <Image src="/whatsapp.png" alt="Whatsapp" width={18} height={18} />
-          </div>
+        <div className="flex flex-row gap-5 place-self-center">
+          <a href="">
+            <img src="facebook.png" alt="" className='w-6 h-6' />
+          </a>
+          <a href="">
+            <img src="instagram.png" alt="" className='w-6 h-6' />
+          </a>
+          <a href="">
+            <img src="whatsapp.png" alt="" className='w-6 h-6' />
+          </a>
+          <a href="">
+            <img src="youtube.png" alt="" className='w-6 h-6' />
+          </a>
         </div>
       </div>
     </footer>
-  );
+  )
 }
+export default Footer
