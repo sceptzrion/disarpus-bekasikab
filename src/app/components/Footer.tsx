@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#2e2e2e] text-white">
       {/* ================= TOP ================= */}
-      <div className="px-6 pt-14 pb-10">
+      <div className="px-18 pt-14 pb-10">
         <div className="mx-auto grid max-w-14xl grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex items-start gap-3">
             <Image
@@ -16,7 +16,7 @@ export default function Footer() {
 
             <div>
               <span className="mb-2 block text-base font-semibold text-white">
-                Dinas Perpustakaan dan Arsip Kab. Bekasi
+                Dinas Arsip dan Perpustakaan Kab. Bekasi
               </span>
 
               <ul className="space-y-1 text-sm">
@@ -39,7 +39,7 @@ export default function Footer() {
               </p>
               <p className="mt-2 text-sm">+62 857-3907-6216</p>
             </div>
-            <div className="w-full h-[160px] overflow-hidden rounded-lg border border-white/20">
+            <div className="w-full h-40 overflow-hidden rounded-lg border border-white/20">
               <iframe
                 title="Lokasi Dinas Arsip dan Perpustakaan Daerah Kabupaten Bekasi"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d824.0000000000001!2d107.1718405!3d-6.3643499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699be0d223f435%3A0xaf71ae539bf1557e!2sDINAS%20ARSIP%20DAN%20PERPUSTAKAAN%20DAERAH!5e0!3m2!1sid!2sid!4v1700000000000"
