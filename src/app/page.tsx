@@ -4,18 +4,10 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
-      {/* ================= BANNER FULL BLEED =================   }
-      <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen">
-        <div className="relative min-h-[520px] w-screen">
-          <Image
-            src="/banner_disarpus.jpg"
-            alt="Banner Dinas Arsip dan Perpustakaan Kabupaten Bekasi"
-            fill
-            priority
-            className="object-contain bg-white"
-          />
-        </div>
+    <main className="flex flex-col w-full  bg-white">
+      {/* ================= BANNER FULL BLEED =================   */}
+      <section className="">
+        <img src="banner_disarpus.jpg" />
       </section>
 
       {/* ================= AKSES CEPAT ================= */}
