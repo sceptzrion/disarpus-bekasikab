@@ -50,7 +50,7 @@ import Image from 'next/image'
           <p>Indonesia</p>
         </div>
 
-        <div className="flex flex-row gap-5 place-self-center">
+        <div className="flex flex-row gap-6 place-self-center">
           <a href="">
             <img src="facebook.png" alt="" className='w-6 h-6' />
           </a>
