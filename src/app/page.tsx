@@ -11,7 +11,7 @@ export default function Home() {
       </section>
 
       {/* ================= AKSES CEPAT ================= */}
-      <section className="px-6 py-16">
+      <section className="px-6 py-8">
         <div className="mx-auto max-w-6xl">
           <div className="mb-12">
             <h1 className="text-3xl font-bold text-[#1895A2]">AKSES CEPAT</h1>
