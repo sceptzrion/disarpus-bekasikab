@@ -6,7 +6,7 @@ import Image from 'next/image'
     <footer className='flex flex-col py-8 px-35 bg-[#215D64] text-white'>
       <div className="flex flex-row justify-between border-b-2 border-white pb-10">
         <div className='flex flex-row gap-9'>
-          <img src="logo_disarpus_white.png" alt="" className='aspect-square w-17 h-17'/>
+          <Image src="/logo_disarpus_white.png" width={68} height={68} alt="" className='aspect-square w-17 h-17'/>
           <div className='flex flex-col gap-2.5 text-[13px] font-base'>
             <h1 className='text-base font-semibold'>
               Dinas Perpustakaan dan Arsip Kab. Bekasi
@@ -52,16 +52,16 @@ import Image from 'next/image'
 
         <div className="flex flex-row gap-6 place-self-center">
           <a href="">
-            <img src="facebook.png" alt="" className='w-6 h-6' />
+            <Image src="/facebook.png" width={24} height={24} alt="" className='w-6 h-6' />
           </a>
           <a href="">
-            <img src="instagram.png" alt="" className='w-6 h-6' />
+            <Image src="/instagram.png" width={24} height={24} alt="" className='w-6 h-6' />
           </a>
           <a href="">
-            <img src="whatsapp.png" alt="" className='w-6 h-6' />
+            <Image src="/whatsapp.png" width={24} height={24} alt="" className='w-6 h-6' />
           </a>
           <a href="">
-            <img src="youtube.png" alt="" className='w-6 h-6' />
+            <Image src="/youtube.png" width={24} height={24} alt="" className='w-6 h-6' />
           </a>
         </div>
       </div>
