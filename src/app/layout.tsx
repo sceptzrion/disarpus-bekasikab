@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Poppins } from "next/font/google";
-import Footer from "@/app/components/Footer";
-import Navbar from "@/app/components/Navbar";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Dinas Arsip dan Perpustakaan - Kabupaten Bekasi",
