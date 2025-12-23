@@ -200,14 +200,14 @@ const Navbar: React.FC = () => {
         <DropdownMenu
           label="Profil"
           items={[
-            { label: "Sejarah", href: "/profil/sejarah" },
+            { label: "profil disarpus", href: "/profil/profil-disarpus" },
             { label: "Visi dan Misi", href: "/profil/visi-misi" },
             {
               label: "Struktur Organisasi",
               href: "/profil/struktur-organisasi",
             },
             { label: "Tugas dan Fungsi", href: "/profil/tugas-dan-fungsi" },
-            { label: "Lokasi & Kontak", href: "/profil/sambutan-pimpinan" },
+            { label: "Lokasi & Kontak", href: "/profil/lokasi-kontak" },
           ]}
         />
 
