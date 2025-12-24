@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function ProfilDisarpusPage() {
   return (
-    <main className="bg-white px-8 py-12 max-w-6xl mx-auto">
+    <main className="bg-white px-20 py-12  mx-auto">
       {/* Breadcrumb */}
       <nav className="text-sm text-gray-500 mb-8">
         <Link href="/" className="hover:text-[#1895A2]">
@@ -17,7 +17,7 @@ export default function ProfilDisarpusPage() {
       </nav>
 
       {/* Title */}
-      <h1 className="text-2xl md:text-3xl font-bold text-[#012970] text-center mb-10">
+      <h1 className="text-2xl md:text-3xl font-bold text-[#1895A2] text-center mb-10">
         PROFIL DINAS ARSIP DAN PERPUSTAKAAN
         <br />
         KABUPATEN BEKASI
@@ -36,7 +36,7 @@ export default function ProfilDisarpusPage() {
 
       {/* Dasar Hukum */}
       <section className="mb-10">
-        <h2 className="text-xl font-semibold text-[#012970] mb-4">
+        <h2 className="text-xl font-semibold text-[#1895A2] mb-4">
           Dasar Hukum dan Kewenangan
         </h2>
         <p className="text-gray-700 leading-relaxed text-justify">
@@ -54,7 +54,7 @@ export default function ProfilDisarpusPage() {
       <section className="space-y-8">
         {/* Kearsipan */}
         <div>
-          <h3 className="text-lg font-semibold text-[#012970] mb-3">
+          <h3 className="text-lg font-semibold text-[#1895A2] mb-3">
             1. Bidang Kearsipan
           </h3>
           <ul className="list-disc list-inside text-gray-700 space-y-2">
@@ -70,7 +70,7 @@ export default function ProfilDisarpusPage() {
 
         {/* Perpustakaan */}
         <div>
-          <h3 className="text-lg font-semibold text-[#012970] mb-3">
+          <h3 className="text-lg font-semibold text-[#1895A2] mb-3">
             2. Bidang Perpustakaan
           </h3>
           <ul className="list-disc list-inside text-gray-700 space-y-2">
@@ -85,7 +85,7 @@ export default function ProfilDisarpusPage() {
 
         {/* Penunjang */}
         <div>
-          <h3 className="text-lg font-semibold text-[#012970] mb-3">
+          <h3 className="text-lg font-semibold text-[#1895A2] mb-3">
             3. Urusan Penunjang Lainnya
           </h3>
           <ul className="list-disc list-inside text-gray-700 space-y-2">

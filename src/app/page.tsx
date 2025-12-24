@@ -56,7 +56,7 @@ export default function Home() {
           {/* Box Artikel */}
           <div className="rounded-2xl bg-[#E9F6F7] p-8">
             <div className="mb-8 text-center">
-              <h2 className="text-2xl font-bold text-[#012970]">ARTIKEL</h2>
+              <h2 className="text-2xl font-bold text-[#1895A2]">ARTIKEL</h2>
               <p className="text-gray-700">
                 Lihat Berita, Artikel & Press Release.
               </p>

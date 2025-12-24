@@ -1,8 +1,39 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 export default function LokasiKontakPage() {
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/mdanjzgr", {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  }
+
   return (
-    <main className=" bg-white px-8 py-12 ">
+    <main className="bg-white px-8 py-12">
       {/* Breadcrumb */}
       <nav className="text-sm text-gray-500 mb-8">
         <Link href="/" className="hover:text-[#1895A2]">
@@ -47,8 +78,7 @@ export default function LokasiKontakPage() {
             <p className="text-gray-700 leading-relaxed">
               Dinas Arsip dan Perpustakaan Daerah Kabupaten Bekasi <br />
               Jln. Deltamas Boulevard Sukamahi <br />
-              Cikarang Pusat Kabupaten Bekasi
-              <br />
+              Cikarang Pusat Kabupaten Bekasi <br />
               Jawa Barat (17530), Indonesia
             </p>
           </div>
@@ -108,27 +138,36 @@ export default function LokasiKontakPage() {
           </div>
         </div>
 
-        {/* KANAN — FORM KIRIM PESAN */}
+        {/* KANAN — FORM */}
         <div className="bg-gray-50 p-6 rounded-lg shadow">
           <h2 className="text-xl font-semibold text-[#012970] mb-5">
             Kirim Pesan / Pengaduan
           </h2>
 
-          <form
-            action="mailto:staabhi71@gmail.com"
-            method="post"
-            encType="text/plain"
-            className="space-y-4"
-          >
+          {/* NOTIFIKASI */}
+          {status === "success" && (
+            <div className="mb-4 rounded bg-green-100 text-green-800 px-4 py-2">
+              Pesan berhasil dikirim. Terima kasih atas pengaduan Anda.
+            </div>
+          )}
+
+          {status === "error" && (
+            <div className="mb-4 rounded bg-red-100 text-red-800 px-4 py-2">
+              Terjadi kesalahan. Silakan coba kembali.
+            </div>
+          )}
+
+          <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">
                 Nama
               </label>
               <input
                 type="text"
-                name="Nama"
+                name="nama"
                 required
-                className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-1 focus:ring-[#1895A2]"
+                className="w-full border rounded px-3 py-2 text-gray-900 bg-white
+                           focus:outline-none focus:ring-1 focus:ring-[#1895A2]"
               />
             </div>
 
@@ -138,9 +177,10 @@ export default function LokasiKontakPage() {
               </label>
               <input
                 type="email"
-                name="Email"
+                name="email"
                 required
-                className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-1 focus:ring-[#1895A2]"
+                className="w-full border rounded px-3 py-2 text-gray-900 bg-white
+                           focus:outline-none focus:ring-1 focus:ring-[#1895A2]"
               />
             </div>
 
@@ -149,16 +189,21 @@ export default function LokasiKontakPage() {
                 Pesan / Pengaduan
               </label>
               <textarea
-                name="Pesan"
+                name="pesan"
                 rows={4}
                 required
-                className="w-full border rounded px-3 py-2 focus:outline-none focus:ring-1 focus:ring-[#1895A2]"
+                className="w-full border rounded px-3 py-2 text-gray-900 bg-white
+                           focus:outline-none focus:ring-1 focus:ring-[#1895A2]"
               />
             </div>
 
+            {/* Honeypot */}
+            <input type="text" name="_gotcha" className="hidden" />
+
             <button
               type="submit"
-              className="bg-[#1895A2] text-white px-6 py-2 rounded hover:bg-[#147f8a] transition"
+              className="bg-[#1895A2] text-white px-6 py-2 rounded
+                         hover:bg-[#147f8a] transition"
             >
               Kirim Pesan
             </button>
