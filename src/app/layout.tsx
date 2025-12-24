@@ -21,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="id">
-      <body className="bg-white">
+    <html lang="id" className="bg-white">
+      <body className={`w-full ${poppins.variable} font-sans`}>
         <Navbar />
         {children}
         <Footer />

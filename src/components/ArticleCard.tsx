@@ -36,9 +36,9 @@ export default function ArticleCard({
 
         <p className="mb-4 text-sm text-gray-600 text-justify">{excerpt}</p>
 
-        <button className="rounded-md bg-[#F26924] px-4 py-1.5 text-sm text-white hover:bg-[#DE6F37]">
+        <a href="/artikel/isi-artikel" className="rounded-md bg-[#F26924] px-4 py-1.5 text-sm text-white hover:bg-[#DE6F37]">
           Selengkapnya
-        </button>
+        </a>
       </div>
     </div>
   );
