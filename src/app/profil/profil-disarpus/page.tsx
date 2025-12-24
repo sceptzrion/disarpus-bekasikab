@@ -1,103 +1,97 @@
-import Link from "next/link";
+import HeroPage from "@/components/HeroPage";
+
+const BREADCRUMBS = [
+  { label: "Beranda", href: "/" },
+  { label: "Profil", href: "/profil" },
+  { label: "Profil DISARPUS" },
+];
+
+const AUTHORITY_GROUPS = [
+  {
+    title: "1. Bidang Kearsipan",
+    items: [
+      "Pengelolaan arsip dinamis.",
+      "Pembinaan kearsipan pada perangkat daerah dan instansi terkait.",
+      "Pengelolaan arsip statis dan layanan informasi kearsipan.",
+      "Pelaksanaan pengawasan kearsipan daerah.",
+      "Penyelamatan, pelestarian, dan penyusutan arsip.",
+    ],
+  },
+  {
+    title: "2. Bidang Perpustakaan",
+    items: [
+      "Pengembangan perpustakaan dan budaya literasi masyarakat.",
+      "Pengelolaan perpustakaan daerah dan layanan sirkulasi.",
+      "Peningkatan akses layanan melalui perpustakaan keliling.",
+      "Pengembangan koleksi, layanan digital, dan literasi informasi.",
+    ],
+  },
+  {
+    title: "3. Urusan Penunjang Lainnya",
+    items: [
+      "Pengelolaan perencanaan, evaluasi, ketatausahaan, dan kehumasan.",
+      "Pengelolaan sumber daya manusia, keuangan, dan aset dinas.",
+      "Koordinasi dengan instansi pemerintah pusat, provinsi, dan lembaga terkait.",
+    ],
+  },
+];
 
 export default function ProfilDisarpusPage() {
   return (
-    <main className="bg-white px-20 py-12  mx-auto">
-      {/* Breadcrumb */}
-      <nav className="text-sm text-gray-500 mb-8">
-        <Link href="/" className="hover:text-[#1895A2]">
-          Beranda
-        </Link>
-        {" / "}
-        <Link href="/profil" className="hover:text-[#1895A2]">
-          Profil
-        </Link>
-        {" / "}
-        <span className="text-[#012970] font-medium">Profil DISARPUS</span>
-      </nav>
+    <main className="bg-white">
+      {/* HERO */}
+      <HeroPage
+        backgroundSrc="/heropage.png"
+        backgroundAlt="Profil DISARPUS"
+        breadcrumbs={BREADCRUMBS}
+        title="PROFIL DINAS ARSIP DAN PERPUSTAKAAN KABUPATEN BEKASI"
+      />
 
-      {/* Title */}
-      <h1 className="text-2xl md:text-3xl font-bold text-[#1895A2] text-center mb-10">
-        PROFIL DINAS ARSIP DAN PERPUSTAKAAN
-        <br />
-        KABUPATEN BEKASI
-      </h1>
+      {/* CONTENT */}
+      <section className="px-6 sm:px-8 lg:px-12 py-10 lg:py-12">
+        <div className="mx-auto max-w-6xl flex flex-col gap-8 sm:gap-10">
+          {/* Pendahuluan */}
+          <section className="text-gray-700 leading-relaxed text-justify">
+            <p className="text-sm sm:text-base">
+              Dinas Arsip dan Perpustakaan Kabupaten Bekasi memiliki peran pokok
+              dalam penyelenggaraan urusan pemerintahan di bidang kearsipan dan
+              perpustakaan, serta mendukung urusan pemerintahan lainnya yang
+              berkaitan dengan pengelolaan informasi, pelestarian arsip, dan
+              peningkatan budaya literasi masyarakat.
+            </p>
+          </section>
 
-      {/* Pendahuluan */}
-      <section className="mb-10 text-gray-700 leading-relaxed text-justify">
-        <p>
-          Dinas Arsip dan Perpustakaan Kabupaten Bekasi memiliki peran pokok
-          dalam penyelenggaraan urusan pemerintahan di bidang kearsipan dan
-          perpustakaan, serta mendukung urusan pemerintahan lainnya yang
-          berkaitan dengan pengelolaan informasi, pelestarian arsip, dan
-          peningkatan budaya literasi masyarakat.
-        </p>
-      </section>
+          {/* Dasar Hukum */}
+          <section className="flex flex-col gap-3">
+            <h2 className="text-lg sm:text-xl font-semibold text-[#1895A2]">
+              Dasar Hukum dan Kewenangan
+            </h2>
+            <p className="text-gray-700 text-sm sm:text-base leading-relaxed text-justify">
+              Sebagaimana diatur dalam Peraturan Bupati Kabupaten Bekasi Nomor
+              92 Tahun 2021 tentang Kedudukan, Susunan Organisasi, Tugas dan
+              Fungsi Dinas Arsip dan Perpustakaan Kabupaten Bekasi, pada Pasal 2
+              ayat (1) dijelaskan bahwa Dinas Arsip dan Perpustakaan Kabupaten
+              Bekasi menyelenggarakan urusan pemerintahan di bidang kearsipan
+              dan perpustakaan, serta menunjang urusan pemerintahan lainnya
+              sesuai ketentuan peraturan perundang-undangan.
+            </p>
+          </section>
 
-      {/* Dasar Hukum */}
-      <section className="mb-10">
-        <h2 className="text-xl font-semibold text-[#1895A2] mb-4">
-          Dasar Hukum dan Kewenangan
-        </h2>
-        <p className="text-gray-700 leading-relaxed text-justify">
-          Sebagaimana diatur dalam Peraturan Bupati Kabupaten Bekasi Nomor 92
-          Tahun 2021 tentang Kedudukan, Susunan Organisasi, Tugas dan Fungsi
-          Dinas Arsip dan Perpustakaan Kabupaten Bekasi, pada Pasal 2 ayat (1)
-          dijelaskan bahwa Dinas Arsip dan Perpustakaan Kabupaten Bekasi
-          menyelenggarakan urusan pemerintahan di bidang kearsipan dan
-          perpustakaan, serta menunjang urusan pemerintahan lainnya sesuai
-          ketentuan peraturan perundang-undangan.
-        </p>
-      </section>
-
-      {/* Kewenangan */}
-      <section className="space-y-8">
-        {/* Kearsipan */}
-        <div>
-          <h3 className="text-lg font-semibold text-[#1895A2] mb-3">
-            1. Bidang Kearsipan
-          </h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li>Pengelolaan arsip dinamis.</li>
-            <li>
-              Pembinaan kearsipan pada perangkat daerah dan instansi terkait.
-            </li>
-            <li>Pengelolaan arsip statis dan layanan informasi kearsipan.</li>
-            <li>Pelaksanaan pengawasan kearsipan daerah.</li>
-            <li>Penyelamatan, pelestarian, dan penyusutan arsip.</li>
-          </ul>
-        </div>
-
-        {/* Perpustakaan */}
-        <div>
-          <h3 className="text-lg font-semibold text-[#1895A2] mb-3">
-            2. Bidang Perpustakaan
-          </h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li>Pengembangan perpustakaan dan budaya literasi masyarakat.</li>
-            <li>Pengelolaan perpustakaan daerah dan layanan sirkulasi.</li>
-            <li>Peningkatan akses layanan melalui perpustakaan keliling.</li>
-            <li>
-              Pengembangan koleksi, layanan digital, dan literasi informasi.
-            </li>
-          </ul>
-        </div>
-
-        {/* Penunjang */}
-        <div>
-          <h3 className="text-lg font-semibold text-[#1895A2] mb-3">
-            3. Urusan Penunjang Lainnya
-          </h3>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li>
-              Pengelolaan perencanaan, evaluasi, ketatausahaan, dan kehumasan.
-            </li>
-            <li>Pengelolaan sumber daya manusia, keuangan, dan aset dinas.</li>
-            <li>
-              Koordinasi dengan instansi pemerintah pusat, provinsi, dan lembaga
-              terkait.
-            </li>
-          </ul>
+          {/* Kewenangan */}
+          <section className="flex flex-col gap-8">
+            {AUTHORITY_GROUPS.map((group) => (
+              <div key={group.title} className="flex flex-col gap-3">
+                <h3 className="text-base sm:text-lg font-semibold text-[#1895A2]">
+                  {group.title}
+                </h3>
+                <ul className="list-disc list-inside text-gray-700 text-sm sm:text-base space-y-2">
+                  {group.items.map((it) => (
+                    <li key={it}>{it}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </section>
         </div>
       </section>
     </main>
