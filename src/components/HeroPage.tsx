@@ -41,7 +41,7 @@ const HeroPage: React.FC<HeroPageProps> = ({
         />
 
         {/* overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/40" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/30 to-black/40" />
       </div>
 
       {/* ================= HERO CONTENT ================= */}
